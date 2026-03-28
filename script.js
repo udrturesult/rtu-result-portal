@@ -23,16 +23,13 @@ let result=document.getElementById("result");
 
 if(student){
 
-result.innerHTML=`
-
+result.innerHTML = `
 <h3>${student.name}</h3>
 
-<p>Roll No: ${student.roll}</p>
-
-<p>Branch: ${student.branch}</p>
+<p><b>Roll No:</b> ${student.roll}</p>
+<p><b>Branch:</b> ${student.branch}</p>
 
 <table>
-
 <tr>
 <th>Subject</th>
 <th>Marks</th>
@@ -56,14 +53,4 @@ result.innerHTML=`
 </table>
 
 <p><b>Result: PASS</b></p>
-
 `;
-
-}
-else{
-
-result.innerHTML="Invalid Roll Number or Date of Birth";
-
-}
-
-}
