@@ -1,56 +1,69 @@
-body{
-font-family:Arial;
-background:#f2f2f2;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+const students = [
+
+{
+roll:"RTU21CS001",
+dob:"2000-07-10",
+name:"Rahul Sharma",
+branch:"Computer Science",
+maths:82,
+physics:75,
+programming:89
 }
 
-.result-card{
-background:white;
-padding:30px;
-width:500px;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
-border-radius:8px;
+];
+
+function checkResult(){
+
+let roll=document.getElementById("roll").value;
+let dob=document.getElementById("dob").value;
+
+let student=students.find(s=>s.roll===roll && s.dob===dob);
+
+let result=document.getElementById("result");
+
+if(student){
+
+result.innerHTML=`
+
+<h3>${student.name}</h3>
+
+<p>Roll No: ${student.roll}</p>
+
+<p>Branch: ${student.branch}</p>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+</tr>
+
+<tr>
+<td>Maths</td>
+<td>${student.maths}</td>
+</tr>
+
+<tr>
+<td>Physics</td>
+<td>${student.physics}</td>
+</tr>
+
+<tr>
+<td>Programming</td>
+<td>${student.programming}</td>
+</tr>
+
+</table>
+
+<p><b>Result: PASS</b></p>
+
+`;
+
+}
+else{
+
+result.innerHTML="Invalid Roll Number or Date of Birth";
+
 }
 
-.header{
-text-align:center;
-margin-bottom:20px;
-}
-
-.logo{
-width:70px;
-}
-
-input{
-width:100%;
-padding:10px;
-margin-top:10px;
-}
-
-button{
-width:100%;
-padding:10px;
-margin-top:15px;
-background:#003366;
-color:white;
-border:none;
-cursor:pointer;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-}
-
-table, th, td{
-border:1px solid #ccc;
-}
-
-th, td{
-padding:10px;
-text-align:left;
 }
