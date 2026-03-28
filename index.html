@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>RTU Result Portal</title>
 <link rel="stylesheet" href="style.css">
@@ -7,16 +8,26 @@
 
 <body>
 
-<div class="container">
+<div class="result-card">
 
-<h1>Rajasthan Technical University</h1>
-<p>Result Portal</p>
+<div class="header">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Rajasthan_Technical_University_logo.png" class="logo">
+
+<h2>Rajasthan Technical University</h2>
+<p>Examination Result Portal</p>
+
+</div>
+
+<div class="form">
 
 <input type="text" id="roll" placeholder="Enter Roll Number">
 
 <input type="date" id="dob">
 
 <button onclick="checkResult()">View Result</button>
+
+</div>
 
 <div id="result"></div>
 
